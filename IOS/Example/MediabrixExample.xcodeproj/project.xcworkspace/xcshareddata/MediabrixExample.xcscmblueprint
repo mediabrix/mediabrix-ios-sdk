@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "51135FF313444CFEA9A1E846C0266158B6B849E5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "51135FF313444CFEA9A1E846C0266158B6B849E5" : 0,
+    "487BB1ECD98AB9D0A6F083EED997E329769BD989" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "09CB857B-97EA-4F60-8855-BFBDA9DE6DD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "51135FF313444CFEA9A1E846C0266158B6B849E5" : "mediabrix-ios-sdk",
+    "487BB1ECD98AB9D0A6F083EED997E329769BD989" : "mediabrix-ios-sdk-dev"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MediabrixExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/MediabrixExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/repo.mediabrix.com:8443\/scm\/ios\/mediabrix-ios-sdk-dev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "487BB1ECD98AB9D0A6F083EED997E329769BD989"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/repo.mediabrix.com:8443\/scm\/ios\/mediabrix-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51135FF313444CFEA9A1E846C0266158B6B849E5"
+    }
+  ]
+}

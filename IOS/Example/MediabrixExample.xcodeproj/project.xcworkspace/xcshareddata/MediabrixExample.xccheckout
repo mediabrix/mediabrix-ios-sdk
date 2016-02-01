@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09CB857B-97EA-4F60-8855-BFBDA9DE6DD8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MediabrixExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>487BB1ECD98AB9D0A6F083EED997E329769BD989</key>
+		<string>https://repo.mediabrix.com:8443/scm/ios/mediabrix-ios-sdk-dev.git</string>
+		<key>51135FF313444CFEA9A1E846C0266158B6B849E5</key>
+		<string>https://repo.mediabrix.com:8443/scm/ios/mediabrix-ios-sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/MediabrixExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>487BB1ECD98AB9D0A6F083EED997E329769BD989</key>
+		<string>../../../../mediabrix-ios-sdk-dev</string>
+		<key>51135FF313444CFEA9A1E846C0266158B6B849E5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://repo.mediabrix.com:8443/scm/ios/mediabrix-ios-sdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>51135FF313444CFEA9A1E846C0266158B6B849E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>51135FF313444CFEA9A1E846C0266158B6B849E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mediabrix-ios-sdk</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>487BB1ECD98AB9D0A6F083EED997E329769BD989</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mediabrix-ios-sdk-dev</string>
+		</dict>
+	</array>
+</dict>
+</plist>
