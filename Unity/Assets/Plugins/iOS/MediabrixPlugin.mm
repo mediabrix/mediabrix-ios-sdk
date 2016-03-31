@@ -21,7 +21,7 @@ NSDictionary * mb_dictionaryByAddingEntriesFromDictionary(NSDictionary* self, NS
     if (dictionary) {
         NSMutableDictionary* mutableSelf = self.mutableCopy;
         [mutableSelf addEntriesFromDictionary:dictionary];
-        result = [mutableSelf copy] ;
+        result = [[mutableSelf copy] autorelease];
     }
     // this will coerce the mutable class from returning its mutable self:
     return result;
@@ -147,13 +147,13 @@ UIViewController *UnityGetGLViewController();
     self.rewardCallback = nil;
 
 }
-/*
+
 -(void)dealloc {
 
     [self prepareForReuse];
     [super dealloc];
 }
-*/
+
 @end
 
 @interface MediabrixPlugin ()
@@ -215,17 +215,17 @@ NSAssert1(dictionary && [dictionary isKindOfClass:[NSDictionary class]] || dicti
     MediabrixTestTarget(target)
     MediabrixPluginAd* result = nil;
     if (target) {
-        result = [[MediabrixPluginAd alloc] init];
+        result = [[[MediabrixPluginAd alloc] init] autorelease];
         result.target = target;
         NSMutableArray* mutableAds = [self.ads mutableCopy];
         [mutableAds addObject:result];
         
         @synchronized(self) {
-           // [_ads release];
+            [_ads release];
             _ads = mutableAds.copy;
         }
         
-       // [mutableAds release];
+        [mutableAds release];
     }
     
     return result;
@@ -451,7 +451,7 @@ NSAssert1(dictionary && [dictionary isKindOfClass:[NSDictionary class]] || dicti
         
         NSString* adIdentifier = [self identifierForAd:ad];
         
-        unityCallback didLoadCallback = [ad.didLoadCallback copy] ;
+        unityCallback didLoadCallback = [[ad.didLoadCallback copy] autorelease];
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(adHandler:willChageStatusForIdentifier:)]) {
             [self.delegate adHandler:self willChageStatusForIdentifier:adIdentifier];
@@ -588,7 +588,7 @@ NSAssert1(dictionary && [dictionary isKindOfClass:[NSDictionary class]] || dicti
     self.defaultAdData = nil;
     self.delegate = nil;
     self.ads = nil;
-   // [super dealloc];
+    [super dealloc];
 }
 
 #pragma mark Public Plugin Calls
@@ -609,8 +609,8 @@ NSAssert1(dictionary && [dictionary isKindOfClass:[NSDictionary class]] || dicti
     NSDictionary* dict = mb_dictionaryByAddingEntriesFromDictionary(self.defaultAdData ? : @{}, @{key:value});
     
     @synchronized(self) {
-       // [_defaultAdData release];
-        //_defaultAdData = [dict retain];
+        [_defaultAdData release];
+        _defaultAdData = [dict retain];
     }
 }
 
@@ -619,7 +619,7 @@ NSAssert1(dictionary && [dictionary isKindOfClass:[NSDictionary class]] || dicti
 static const char* serviceReadyCallbackName     = "OnStarted";
 static const char* didLoadCallbackName          = "OnAdReady";
 static const char* didFailLoadCallbackName      = "OnAdUnavailable";
-static const char* willShowAdCallbackName       = "onAdWillShow";
+static const char* willShowAdCallbackName       = "OnAdShown";
 static const char* adDidCloseCallbackName       = "OnAdClosed";
 static const char* rewardDidChangeCallbackName  = "OnAdRewardConfirmation";
 
@@ -655,7 +655,7 @@ static NSDictionary* mb_ComponentSeparatedKeyValueFromStringWithSeparator(const 
             int max = floorf((array.count / 2) * 2);
             for (int i = 0; i < max; i +=2) {
                 if (!result) {
-                    result = [[NSMutableDictionary alloc] init] ;
+                    result = [[[NSMutableDictionary alloc] init] autorelease];
                 }
                 result[array[i]] = array[i+1];
             }
@@ -677,7 +677,7 @@ extern "C" {
         
         NSString*objcString = mb_objcstring(callbackHandlerName);
 		if (![__callback isEqualToString:objcString]) {
-            //[__callback release];
+            [__callback release];
 			__callback = [objcString copy];
         }
         unity_callback(serviceReadyCallbackName, "test");
@@ -694,7 +694,7 @@ extern "C" {
         [getPlugin() showAdWithIdentifier:mb_objcstring(identifer) willShowCallback:^(BOOL success, NSString *identifier, MediabrixPlugin *plugin) {
             unity_callback(willShowAdCallbackName, [identifier UTF8String]);
         } rewardsCallback:^(BOOL success, NSString *identifier, MediabrixPlugin *plugin) {
-			unity_callback(rewardDidChangeCallbackName, [identifier UTF8String]);
+			unity_callback(rewardDidChangeCallbackName, [identifer UTF8String]);
         } didCloseCallback:^(BOOL success, NSString *identifier, MediabrixPlugin *plugin) {
             unity_callback(adDidCloseCallbackName, [identifier UTF8String]);
         }];
