@@ -1,9 +1,9 @@
 //
 //  ViewController.h
-//  Muhammad's Sample App
+//  Sample Project
 //
-//  Created by Muhammad Zubair on 3/24/16.
-//  Copyright © 2016 Muhammad Zubair. All rights reserved.
+//  Created by Muhammad Zubair on 5/5/16.
+//  Copyright © 2016 MediaBrix. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,8 +12,6 @@
 @interface ViewController : UIViewController
 
 @property(strong,nonatomic) NSMutableDictionary * publisherVars;
-
--(IBAction)selector:(id)sender;
 
 @end
 

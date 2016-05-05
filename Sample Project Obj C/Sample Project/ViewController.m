@@ -1,13 +1,12 @@
 //
 //  ViewController.m
-//  Muhammad's Sample App
+//  Sample Project
 //
-//  Created by Muhammad Zubair on 3/24/16.
-//  Copyright © 2016 Muhammad Zubair. All rights reserved.
+//  Created by Muhammad Zubair on 5/5/16.
+//  Copyright © 2016 MediaBrix. All rights reserved.
 //
 
 #import "ViewController.h"
-
 
 @interface ViewController ()
 
@@ -17,16 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor clearColor];
     [MediaBrix initMediaBrixAdHandler:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"TwwvxoFnJn"];
-    
+     [self loadAd];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [self loadAd];
-
-    
-}
 -(void)loadAd{
     self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
     [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rally" adData:self.publisherVars withViewController:self];
@@ -34,14 +27,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
--(void)test{
-    
-
-    [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rally" fromViewController:self reloadWhenFinish:NO];
-
-}
 - (void)mediaBrixAdHandler:(NSNotification *)notification {
     
     /* implement the "mediaBrixAdHanlder" function for notifications (Required) */
@@ -57,14 +45,14 @@
         /* invoked whne ad failure occurs */
     }
     else if([kMediaBrixAdReadyNotification isEqualToString:notification.name]){
-      
+        
         //[[MediaBrix sharedInstance]showAdWithIdentifier:@"IOS_Rescue" fromViewController:self reloadWhenFinish:NO];
         dispatch_async(dispatch_get_main_queue(), ^{
             // do work here
             
             [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rally" fromViewController:self reloadWhenFinish:NO];
         });
-//
+        //
         /* invoked when ad has succesfully downloaded and ready for showing */
     }
     else if([kMediaBrixAdShowNotification isEqualToString:notification.name]){
@@ -82,5 +70,6 @@
     }
     
 }
+
 
 @end

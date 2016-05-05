@@ -28,6 +28,7 @@ extern NSString* const kMediaBrixAdReadyNotification;
 extern NSString* const kMediaBrixAdShowNotification;
 extern NSString* const kMediaBrixAdDidCloseNotification;
 extern NSString* const kMediaBrixAdRewardNotification;
+extern NSString* const kMediaBrixAdClickedNotification;
 
 extern NSString * const kMediaBrixFlex;
 extern NSString * const kMediaBrixViews;
