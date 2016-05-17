@@ -28,7 +28,7 @@ extern NSString* const kMediaBrixAdReadyNotification;
 extern NSString* const kMediaBrixAdShowNotification;
 extern NSString* const kMediaBrixAdDidCloseNotification;
 extern NSString* const kMediaBrixAdRewardNotification;
-extern NSString* const kMediaBrixAdClickedNotification;
+extern NSString * const kMediaBrixAdClickedNotification;
 
 extern NSString * const kMediaBrixFlex;
 extern NSString * const kMediaBrixViews;
@@ -67,8 +67,8 @@ extern NSString * const kMediabrixTargetZoneKey;
 @protocol MediaBrixUserDefaults <NSObject>
 @required
 
-- (NSURL*)baseURL;
-- (NSString*)appID;
+@property NSURL* baseURL;
+@property NSString* appID;
 - (NSString*)property;
 - (NSDictionary*)defaultAdData;
 
@@ -79,7 +79,7 @@ extern NSString * const kMediabrixTargetZoneKey;
 
 + (void) setUserDefaultsClass:(Class)userDefaultsClass;
 
-+ (NSObject<MediaBrixUserDefaults>*)userDefaults;
++ (NSObject<MediaBrixUserDefaults>*) userDefaults;
 
 + (MediaBrix*) sharedInstance;
 
@@ -96,6 +96,8 @@ extern NSString * const kMediabrixTargetZoneKey;
 -(void)showAdWithIdentifier:(NSString*)adIdentifier fromViewController:(UIViewController*)viewController reloadWhenFinish:(BOOL)isReload;
 
 +(void)initMediaBrixAdHandler:(UIViewController*)viewController withBaseURL:(NSString*)baseURL withAppID:(NSString*)appID;
+
+
 +(void)setMediaBrixAdHandlerData:(NSDictionary*)data;
 
 

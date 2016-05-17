@@ -67,6 +67,9 @@
     else if([ kMediaBrixAdRewardNotification isEqualToString:notification.name]){
         
         /* invoked when ad view is completed and reward can be given */
+    }else if([ kMediaBrixAdClickedNotification isEqualToString:notification.name]){
+        NSLog(@"ADCLICKED");
+        /* invoked when ad view is completed and reward can be given */
     }
     
 }
