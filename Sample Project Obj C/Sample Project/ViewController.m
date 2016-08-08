@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [MediaBrix initMediaBrixAdHandler:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"TwwvxoFnJn"];
-     [self loadAd];
+    [self loadAd];
+
 }
 
 -(void)loadAd{
@@ -33,8 +34,10 @@
 - (void)mediaBrixAdHandler:(NSNotification *)notification {
     
     /* implement the "mediaBrixAdHanlder" function for notifications (Required) */
-    
-    if([kMediaBrixAdWillLoadNotification isEqualToString:notification.name]){
+    if ([kMediaBrixStarted isEqualToString:notification.name]) {
+        [self loadAd];
+    }
+    else if([kMediaBrixAdWillLoadNotification isEqualToString:notification.name]){
         
         /* invoked when the ad has been requested */
         
