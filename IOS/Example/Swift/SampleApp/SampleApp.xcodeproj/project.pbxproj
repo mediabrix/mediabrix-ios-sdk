@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EBF75C41D67566600953D7F /* libMediaBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBF75C31D67566600953D7F /* libMediaBrix.a */; };
 		EE0552F81CCFF34E0058CE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0552F71CCFF34E0058CE07 /* AppDelegate.swift */; };
 		EE0552FA1CCFF34E0058CE07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0552F91CCFF34E0058CE07 /* ViewController.swift */; };
 		EE0552FD1CCFF34E0058CE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0552FB1CCFF34E0058CE07 /* Main.storyboard */; };
 		EE0552FF1CCFF34E0058CE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0552FE1CCFF34E0058CE07 /* Assets.xcassets */; };
 		EE0553021CCFF34E0058CE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0553001CCFF34E0058CE07 /* LaunchScreen.storyboard */; };
-		EE05530B1CCFF3A90058CE07 /* libMediaBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0553091CCFF3A90058CE07 /* libMediaBrix.a */; };
-		EE05530C1CCFF3A90058CE07 /* MBRXMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE05530A1CCFF3A90058CE07 /* MBRXMoatMobileAppKit.framework */; };
 		EE0553121CCFF4760058CE07 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0553111CCFF4760058CE07 /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EBF75C31D67566600953D7F /* libMediaBrix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMediaBrix.a; sourceTree = "<group>"; };
 		EE0552F41CCFF34E0058CE07 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0552F71CCFF34E0058CE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE0552F91CCFF34E0058CE07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,8 +25,6 @@
 		EE0552FE1CCFF34E0058CE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE0553011CCFF34E0058CE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0553031CCFF34E0058CE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE0553091CCFF3A90058CE07 /* libMediaBrix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMediaBrix.a; path = src/libMediaBrix.a; sourceTree = SOURCE_ROOT; };
-		EE05530A1CCFF3A90058CE07 /* MBRXMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBRXMoatMobileAppKit.framework; path = src/MBRXMoatMobileAppKit.framework; sourceTree = SOURCE_ROOT; };
 		EE05530D1CCFF3C10058CE07 /* MediaBrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MediaBrix.h; path = src/mbsdk/MediaBrix.h; sourceTree = "<group>"; };
 		EE05530E1CCFF3F20058CE07 /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE0553111CCFF4760058CE07 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -38,8 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0553121CCFF4760058CE07 /* libxml2.tbd in Frameworks */,
-				EE05530B1CCFF3A90058CE07 /* libMediaBrix.a in Frameworks */,
-				EE05530C1CCFF3A90058CE07 /* MBRXMoatMobileAppKit.framework in Frameworks */,
+				0EBF75C41D67566600953D7F /* libMediaBrix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,10 +46,9 @@
 		EE0552EB1CCFF34E0058CE07 = {
 			isa = PBXGroup;
 			children = (
+				0EBF75C31D67566600953D7F /* libMediaBrix.a */,
 				EE0553111CCFF4760058CE07 /* libxml2.tbd */,
 				EE05530D1CCFF3C10058CE07 /* MediaBrix.h */,
-				EE0553091CCFF3A90058CE07 /* libMediaBrix.a */,
-				EE05530A1CCFF3A90058CE07 /* MBRXMoatMobileAppKit.framework */,
 				EE0552F61CCFF34E0058CE07 /* SampleApp */,
 				EE0552F51CCFF34E0058CE07 /* Products */,
 				EE05530E1CCFF3F20058CE07 /* SampleApp-Bridging-Header.h */,
@@ -277,6 +273,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediabrix.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +296,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediabrix.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,6 +323,7 @@
 				EE0553081CCFF34E0058CE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
