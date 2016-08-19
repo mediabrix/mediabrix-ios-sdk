@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         publisherVar = MediaBrix.userDefaults().defaultAdData()
         
         //load the ad
-        MediaBrix.sharedInstance().loadAdWithIdentifier("Babel_Rally", adData: publisherVar, withViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,8 +38,10 @@ class ViewController: UIViewController {
     func mediaBrixAdHandler(notification: NSNotification){
         
         print("MediaBrix notification = %@,%@",notification.userInfo,notification.name);
-        
-        if(kMediaBrixAdWillLoadNotification == notification.name){
+        if(kMediaBrixStarted == notification.name){
+            MediaBrix.sharedInstance().loadAdWithIdentifier("Babel_Rally", adData: publisherVar, withViewController: self)
+        }
+        else if(kMediaBrixAdWillLoadNotification == notification.name){
             /* invoked when the ad has been requested */
         }
         else if(kMediaBrixAdFailedNotification == notification.name){

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		529F99631CFF2B290045C9E5 /* libMediaBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 529F99621CFF2B290045C9E5 /* libMediaBrix.a */; };
+		0EBF75C21D6755C100953D7F /* libMediaBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBF75C11D6755C100953D7F /* libMediaBrix.a */; };
 		52E4476A1CDB802F0052A801 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E447691CDB802F0052A801 /* libxml2.tbd */; };
 		52E447841CDB841D0052A801 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E447751CDB841D0052A801 /* AppDelegate.m */; };
 		52E447851CDB841D0052A801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E447761CDB841D0052A801 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		529F99621CFF2B290045C9E5 /* libMediaBrix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMediaBrix.a; path = "Sample Project/libMediaBrix.a"; sourceTree = "<group>"; };
+		0EBF75C11D6755C100953D7F /* libMediaBrix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMediaBrix.a; path = "Sample Project/libMediaBrix.a"; sourceTree = "<group>"; };
 		52E4474F1CDB80060052A801 /* Sample Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E447691CDB802F0052A801 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		52E447741CDB841D0052A801 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Sample Project/AppDelegate.h"; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E4476A1CDB802F0052A801 /* libxml2.tbd in Frameworks */,
-				529F99631CFF2B290045C9E5 /* libMediaBrix.a in Frameworks */,
+				0EBF75C21D6755C100953D7F /* libMediaBrix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +51,7 @@
 		52E447461CDB80060052A801 = {
 			isa = PBXGroup;
 			children = (
-				529F99621CFF2B290045C9E5 /* libMediaBrix.a */,
+				0EBF75C11D6755C100953D7F /* libMediaBrix.a */,
 				52E447741CDB841D0052A801 /* AppDelegate.h */,
 				52E447751CDB841D0052A801 /* AppDelegate.m */,
 				52E447761CDB841D0052A801 /* Assets.xcassets */,
@@ -331,6 +331,8 @@
 					Project,
 					"$(PROJECT_DIR)/Sample",
 					Project,
+					"$(PROJECT_DIR)/Sample",
+					Project,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mediabrix.sample.Sample-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,6 +376,8 @@
 					"$(PROJECT_DIR)/Sample",
 					Project,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Sample",
+					Project,
 					"$(PROJECT_DIR)/Sample",
 					Project,
 					"$(PROJECT_DIR)/Sample",
