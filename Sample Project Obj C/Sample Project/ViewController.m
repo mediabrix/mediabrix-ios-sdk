@@ -32,7 +32,7 @@
 }
 
 
-#pragma mark - MediaBrixDelegate 
+#pragma mark - MediaBrixDelegate
 
 -(void)mediaBrixStarted {
     [self loadAd];

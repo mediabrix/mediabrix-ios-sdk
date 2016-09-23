@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var publisherVar:[NSObject:AnyObject] = [NSObject:AnyObject]()
+    var publisherVar:[AnyHashable: Any] = [AnyHashable: Any]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //Initialize mediabix event handler with the base url & the mediabrix provided app_id.
-        MediaBrix.initMediaBrixAdHandler(self, withBaseURL: "http://mobile.mediabrix.com/v2/manifest", withAppID: "TwwvxoFnJn")
+        MediaBrix.initMediaBrixDelegate(self, withBaseURL: "http://mobile.mediabrix.com/v2/manifest", withAppID: "TwwvxoFnJn")
         
         //initialize te publishervariables dictionary
         publisherVar = MediaBrix.userDefaults().defaultAdData()
@@ -31,48 +31,20 @@ class ViewController: UIViewController {
     }
     
     func showAd(){
-        MediaBrix.sharedInstance().showAdWithIdentifier("Babel_Rally", fromViewController: self, reloadWhenFinish: false)
+        MediaBrix.sharedInstance().showAd(withIdentifier: "Babel_Rally", from: self, reloadWhenFinish: false)
     }
     
-    //implement the notification handler thats is required to know when the ad asset download is complete & ad is ready for viewing
-    func mediaBrixAdHandler(notification: NSNotification){
-        
-        print("MediaBrix notification = %@,%@",notification.userInfo,notification.name);
-        if(kMediaBrixStarted == notification.name){
-            MediaBrix.sharedInstance().loadAdWithIdentifier("Babel_Rally", adData: publisherVar, withViewController: self)
-        }
-        else if(kMediaBrixAdWillLoadNotification == notification.name){
-            /* invoked when the ad has been requested */
-        }
-        else if(kMediaBrixAdFailedNotification == notification.name){
-            
-            /* invoked whne ad failure occurs */
-        }
-        else if(kMediaBrixAdReadyNotification == notification.name){
-            
-            /* invoked when ad has succesfully downloaded and ready for showing */
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showAd()
-            })
-        }
-        else if(kMediaBrixAdShowNotification == notification.name){
-            
-            /* invoked when ad is presented */
-            
-        }
-        else if(kMediaBrixAdDidCloseNotification == notification.name){
-            
-            /* invoked when ad is closed */
-            
-        }
-        else if(kMediaBrixAdRewardNotification == notification.name){
-            
-            /* invoked when ad view is completed and reward can be given */
-            
-        }
-    }
-
-
 }
+
+extension ViewController: MediaBrixDelegate {
+    public func mediaBrixAdReady(_ identifier: String!) {
+        DispatchQueue.main.async(execute: {
+            self.showAd()
+        })
+    }
+    func mediaBrixStarted() {
+        MediaBrix.sharedInstance().loadAd(withIdentifier: "Babel_Rally", adData: publisherVar, with: self)
+    }
+}
+
 
