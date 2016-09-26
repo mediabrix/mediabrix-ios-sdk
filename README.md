@@ -1,4 +1,6 @@
 # MediaBrix-iOS
+## With the release of ios SDK version 1.8.0.030, MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
+
 ![Cocoapods](https://img.shields.io/badge/pod-1.8.0.029-blue.svg)
 
 ## Installation with CocoaPods
