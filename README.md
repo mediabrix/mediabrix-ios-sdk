@@ -111,4 +111,4 @@ You will need to receive delegate callbacks from the SDK when loading/showing an
 
 ###Example
 
-To view an example implementation click [here](https://github.com/mediabrix/MediaBrix-PodProject/blob/master/test/test/ViewController.m)
+To view an example implementation click [here](https://github.com/mediabrix/mediabrix-ios-sdk/blob/master/Sample%20Project%20Obj%20C/Sample%20Project/ViewController.m)
