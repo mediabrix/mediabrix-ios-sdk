@@ -33,17 +33,18 @@ class ViewController: UIViewController {
     func showAd(){
         MediaBrix.sharedInstance().showAd(withIdentifier: "Babel_Rally", from: self, reloadWhenFinish: false)
     }
+    func loadAd() {
+        MediaBrix.sharedInstance().loadAd(withIdentifier: "Babel_Rally", adData: publisherVar, with: self)
+    }
     
 }
 
 extension ViewController: MediaBrixDelegate {
     public func mediaBrixAdReady(_ identifier: String!) {
-        DispatchQueue.main.async(execute: {
-            self.showAd()
-        })
+        self.showAd()
     }
     func mediaBrixStarted() {
-        MediaBrix.sharedInstance().loadAd(withIdentifier: "Babel_Rally", adData: publisherVar, with: self)
+        self.loadAd()
     }
 }
 
