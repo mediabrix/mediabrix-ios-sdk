@@ -15,7 +15,7 @@ To integrate MediaBrix into your Xcode project using CocoaPods, specify it in yo
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/mediabrix/MediaBrixPods.git'
+source 'https://github.com/mediabrix/mediabrix-cocoapods-spec.git'
 platform :ios, '7.0'
 
 target 'TargetName' do
