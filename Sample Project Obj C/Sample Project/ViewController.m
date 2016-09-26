@@ -26,6 +26,10 @@
     [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rally" adData:self.publisherVars withViewController:self];
 }
 
+-(void)showAd {
+    [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rally" fromViewController:self reloadWhenFinish:NO];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,9 +42,7 @@
     [self loadAd];
 }
 -(void)mediaBrixAdReady:(NSString *)identifier {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rally" fromViewController:self reloadWhenFinish:NO];
-    });
+    [self showAd];
 }
 
 @end
