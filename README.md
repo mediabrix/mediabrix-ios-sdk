@@ -110,6 +110,11 @@ You will need to receive delegate callbacks from the SDK when loading/showing an
     // Invoked when the user has clicked the ad
 }   
 ```
+###Logging
+You can now disable verbose logging via the sdk
+```
+    [MediaBrix MBEnableVerboseLogging:NO];
+```
 
 ###Example
 
