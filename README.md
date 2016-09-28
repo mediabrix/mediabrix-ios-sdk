@@ -58,7 +58,7 @@ Include the following import and dictionary in your class' header file.
 
 To initialize the MediaBrix SDK you will need to create an instance of the MediaBrix object:
 ```
-[MediaBrix initMediaBrixAdHandler:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
+[MediaBrix initMediaBrixDelegate:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
 //self refers to the UIViewController that is implementing the SDK
 ``` 
 
