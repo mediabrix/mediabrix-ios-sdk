@@ -65,8 +65,8 @@ To initialize the MediaBrix SDK you will need to create an instance of the Media
 ###Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
 ``` 
-publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
-[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:publisherVars withViewController:self];
+self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
+[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:self.publisherVars withViewController:self];
 //self refers to the UIViewController that is implementing the SDK.
 //if you do not have a reference to the UIViewController you can pass null.
 ``` 
