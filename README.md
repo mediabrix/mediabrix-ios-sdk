@@ -45,7 +45,7 @@ Include the following import and dictionary in your class' header file.
 ```
 #import "MediaBrix.h"
  
-@interface ExampleViewController : UIViewController {
+@interface ExampleViewController : UIViewController <MediaBrixDelegate> {
 }
  
 /* property for storing publisher vars from MediaBrix user defaults */
