@@ -41,7 +41,7 @@ The MediaBrix SDK requires ATS to be disabled. To disable ATS you will need to a
 
 ##Implementing the MediaBrix SDK
 
-Include the following import and dictionary in your class' header file. 
+Include the following import and dictionary in your class' header file. Please ensure the ViewController that implements the MediaBrix SDK conforms to the MediaBrixDelegate protocol.
 ```
 #import "MediaBrix.h"
  
