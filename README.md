@@ -58,15 +58,15 @@ Include the following import and dictionary in your class' header file.
 
 To initialize the MediaBrix SDK you will need to create an instance of the MediaBrix object:
 ```
-[MediaBrix initMediaBrixAdHandler:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
+[MediaBrix initMediaBrixDelegate:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
 //self refers to the UIViewController that is implementing the SDK
 ``` 
 
 ###Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
 ``` 
-publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
-[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:publisherVars withViewController:self];
+self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
+[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:self.publisherVars withViewController:self];
 //self refers to the UIViewController that is implementing the SDK.
 //if you do not have a reference to the UIViewController you can pass null.
 ``` 
