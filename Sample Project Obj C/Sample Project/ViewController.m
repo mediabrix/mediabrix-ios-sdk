@@ -23,11 +23,11 @@
 
 -(void)loadAd{
     self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
-    [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rally" adData:self.publisherVars withViewController:self];
+    [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rescue" adData:self.publisherVars withViewController:self];
 }
 
 -(void)showAd {
-    [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rally" fromViewController:self reloadWhenFinish:NO];
+    [[MediaBrix sharedInstance]showAdWithIdentifier:@"Babel_Rescue" fromViewController:self reloadWhenFinish:NO];
 }
 
 - (void)didReceiveMemoryWarning {
