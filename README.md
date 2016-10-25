@@ -1,7 +1,7 @@
 # MediaBrix-iOS
-## With the release of iOS SDK version 1.8.0.047, MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
+## With the release of iOS SDK version 1.8.0.050, MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
 
-![Cocoapods](https://img.shields.io/badge/pod-1.8.0.047-blue.svg)
+![Cocoapods](https://img.shields.io/badge/pod-1.8.0.050-blue.svg)
 
 ## Installation with CocoaPods
 
@@ -68,7 +68,7 @@ Once you received the kMediaBrixStarted callback, you will now be able to load a
 self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
 [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:self.publisherVars withViewController:self];
 //self refers to the UIViewController that is implementing the SDK.
-//if you do not have a reference to the UIViewController you can pass null.
+//if you do not have a reference to the UIViewController you can pass nil.
 ``` 
 
 ###Show an Ad
@@ -76,7 +76,7 @@ Once you receive the notification `kMediaBrixAdReadyNotification`, you can show 
 ````
 [[MediaBrix sharedInstance]showAdWithIdentifier:@"Zone_Name" fromViewController:self reloadWhenFinish:NO];
 //self refers to the UIViewController that is implementing the SDK.
-// if you do not have a reference to the UIViewController you can pass null.
+// if you do not have a reference to the UIViewController you can pass nil.
 ````
 
 ###SDK Delegate Methods
