@@ -1,5 +1,6 @@
 # MediaBrix-iOS
-## With the release of iOS SDK version 1.8.0.050, MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
+## MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
+## Please see "Testing / Release Settings" section for new guidelines on testing and deploying your integration.
 
 ![Cocoapods](https://img.shields.io/badge/pod-1.8.0.050-blue.svg)
 
@@ -58,9 +59,21 @@ Include the following import and dictionary in your class' header file. Please e
 
 To initialize the MediaBrix SDK you will need to create an instance of the MediaBrix object:
 ```
-[MediaBrix initMediaBrixDelegate:self withBaseURL:@"http://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
+[MediaBrix initMediaBrixDelegate:self withBaseURL:@"https://mobile.mediabrix.com/v2/manifest" withAppID:@"APP_ID"]; // Replace APP_ID with the app id provided to you by MediaBrix 
 //self refers to the UIViewController that is implementing the SDK
 ``` 
+
+###Testing / Release Settings
+
+To facilitate integrations and QA around the globe, MediaBrix has deployed an open Base URL for all of our world wide network partners to use while testing the MediaBrix SDK. This Test Base URL will eliminate the need for proxying your device to the US and ensure your app receives 100% fill during testing.
+
+* **Test Base URL:** `https://test-mobile.mediabrix.com/v2/manifest/`
+
+* **Production Base URL:** `https://mobile.mediabrix.com/v2/manifest/`
+
+`https://test-mobile.mediabrix.com/v2/manifest/` should **ONLY** be used for testing purposes, as it will not deliver live campaigns to your app.
+
+It is important to ensure that after testing, the Release build of your app uses the Production Base URL. **If you release your app using the Test Base URL, your app will not receive payable MediaBrix ads.**
 
 ###Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
