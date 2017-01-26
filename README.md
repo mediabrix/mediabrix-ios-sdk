@@ -1,8 +1,8 @@
 # MediaBrix-iOS
-## MediaBrix has changed the method of integration to use delegation for callbacks and initialization. Please review "Initialization" and "SDK Delegate Methods" sections below for updated procedures.
+
 ## Please see "Testing / Release Settings" section for new guidelines on testing and deploying your integration.
 
-![Cocoapods](https://img.shields.io/badge/pod-1.8.0.050-blue.svg)
+![Cocoapods](https://img.shields.io/badge/pod-1.8.1.000-blue.svg)
 
 ## Installation with CocoaPods
 
@@ -17,7 +17,7 @@ To integrate MediaBrix into your Xcode project using CocoaPods, specify it in yo
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/mediabrix/mediabrix-cocoapods-spec.git'
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 target 'TargetName' do
 pod 'MediaBrix'
@@ -30,11 +30,10 @@ Then, run the following command:
 $ pod install
 ```
 
-####iOS 7
-MediaBrix ads display fullscreen ads that hide the status bar. To ensure fullscreen mode in iOS 7, ensure that `preferStatusBarHidden` is set to `NO` or return the MediaBrix view controller in `childViewControllerForStatusBarHidden.`
+####iOS 9 & 10 
+The MediaBrix SDK is now App Transport Security compliant. If you run into any issues when ATS is enabled, please email us at support@mediabrix.com immediately. 
 
-####iOS 9 
-The MediaBrix SDK requires ATS to be disabled. To disable ATS you will need to add the following key and value in your project's info.plist:
+If you do not wish to enable ATS at this time, you may disable it by adding the following key and value in your project's info.plist:
 
 ![](http://knowledge.mediabrix.com/userfiles/803/1179/ckfinder/images/ATS.PNG?dc=201509302214-16)
 
@@ -124,7 +123,7 @@ You will need to receive delegate callbacks from the SDK when loading/showing an
 }   
 ```
 ###Logging
-You can now disable verbose logging via the sdk
+You can now disable verbose logging via the SDK:
 ```
     [MediaBrix MBEnableVerboseLogging:NO];
 ```
