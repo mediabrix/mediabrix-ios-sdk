@@ -30,7 +30,7 @@ Then, run the following command:
 $ pod install
 ```
 
-####iOS 9 & 10 
+#### iOS 9 & 10 
 The MediaBrix SDK is now App Transport Security compliant. If you run into any issues when ATS is enabled, please email us at support@mediabrix.com immediately. 
 
 If you do not wish to enable ATS at this time, you may disable it by adding the following key and value in your project's info.plist:
@@ -39,7 +39,7 @@ If you do not wish to enable ATS at this time, you may disable it by adding the 
 
 
 
-##Implementing the MediaBrix SDK
+## Implementing the MediaBrix SDK
 
 Include the following import and dictionary in your class' header file. Please ensure the ViewController that implements the MediaBrix SDK conforms to the MediaBrixDelegate protocol.
 ```
@@ -54,7 +54,7 @@ Include the following import and dictionary in your class' header file. Please e
 @end
 ```
 
-###Initialization
+### Initialization
 
 To initialize the MediaBrix SDK you will need to create an instance of the MediaBrix object:
 ```
@@ -62,7 +62,7 @@ To initialize the MediaBrix SDK you will need to create an instance of the Media
 //self refers to the UIViewController that is implementing the SDK
 ``` 
 
-###Testing / Release Settings
+### Testing / Release Settings
 
 To facilitate integrations and QA around the globe, MediaBrix has deployed an open Base URL for all of our world wide network partners to use while testing the MediaBrix SDK. This Test Base URL will eliminate the need for proxying your device to the US and ensure your app receives 100% fill during testing.
 
@@ -74,7 +74,7 @@ To facilitate integrations and QA around the globe, MediaBrix has deployed an op
 
 It is important to ensure that after testing, the Release build of your app uses the Production Base URL. **If you release your app using the Test Base URL, your app will not receive payable MediaBrix ads.**
 
-###Load an Ad
+### Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
 ``` 
 self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
@@ -83,7 +83,7 @@ self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
 //if you do not have a reference to the UIViewController you can pass nil.
 ``` 
 
-###Show an Ad
+### Show an Ad
 Once you receive the notification `kMediaBrixAdReadyNotification`, you can show an ad for the zone that the `adIdentifier` returns.
 ````
 [[MediaBrix sharedInstance]showAdWithIdentifier:@"Zone_Name" fromViewController:self reloadWhenFinish:NO];
@@ -122,12 +122,12 @@ You will need to receive delegate callbacks from the SDK when loading/showing an
     // Invoked when the user has clicked the ad
 }   
 ```
-###Logging
+### Logging
 You can now disable verbose logging via the SDK:
 ```
     [MediaBrix MBEnableVerboseLogging:NO];
 ```
 
-###Example
+### Example
 
 To view an example implementation click [here](https://github.com/mediabrix/mediabrix-ios-sdk/blob/master/Sample%20Project%20Obj%20C/Sample%20Project/ViewController.m)
