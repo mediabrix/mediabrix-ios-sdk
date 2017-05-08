@@ -91,7 +91,7 @@ Once you receive the notification `kMediaBrixAdReadyNotification`, you can show 
 // if you do not have a reference to the UIViewController you can pass nil.
 ````
 
-###SDK Delegate Methods
+### SDK Delegate Methods
 You will need to receive delegate callbacks from the SDK when loading/showing an ad. The code below shows the various delegate callback methods from the SDK. 
 ``` 
 /* Required */
