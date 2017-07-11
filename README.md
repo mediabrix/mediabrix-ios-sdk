@@ -127,6 +127,11 @@ You can now disable verbose logging via the SDK:
 ```
     [MediaBrix MBEnableVerboseLogging:NO];
 ```
+### Bitcode
+The Receptiv SDKs v1.8.0.050 and up support bitcode. Current versions that support bitcode:
+ * 1.8.0.050
+ * 1.8.1.000
+
 
 ### Example
 
