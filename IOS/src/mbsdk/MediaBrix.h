@@ -56,38 +56,21 @@ extern NSString* const kMediabrixTargetZoneKey;
 @property (retain, nonatomic, readonly) NSDictionary *target;
 @end
 
-@protocol MediaBrixUserDefaults <NSObject>
-@required
-@property NSURL* baseURL;
-@property NSString* appID;
--(NSString*)property;
--(NSDictionary*)defaultAdData;
-@end
-
 @interface MediaBrix : NSObject
 +(void) MBEnableVerboseLogging:(BOOL)verbose;
-+(void)setUserDefaultsClass:(Class)userDefaultsClass;
 +(void)initMediaBrixDelegate:(id <MediaBrixDelegate>)delegate withBaseURL:(NSString*)baseURL withAppID:(NSString*)appID;
 +(void)setMediaBrixAdHandlerData:(NSDictionary*)data;
-+(void)setBaseURL:(NSString*)baseURL;
-+(void)setAppID:(NSString*)appID;
 +(void)removeMediaBrixObserver:(UIViewController*)viewController;
 +(void)resetInstance;
 +(NSString*)getBaseURL;
 +(NSString*)version;
 +(NSString*)buildVersion;
 +(NSString*)getAppID;
-+(NSObject<MediaBrixUserDefaults>*)userDefaults;
 +(MediaBrix*)sharedInstance;
--(void)loadAdWithIdentifier:(NSString*)adIdentifier adData:(NSDictionary*)adData withViewController:(UIViewController*)viewController;
+-(void)loadAdWithIdentifier:(NSString*)adIdentifier withViewController:(UIViewController*)viewController;
 -(void)showAdWithIdentifier:(NSString*)adIdentifier fromViewController:(UIViewController*)viewController reloadWhenFinish:(BOOL)isReload;
 -(void)loadAdWithTarget:(NSDictionary*)target;
--(void)updateMediaBrixIntenralAdData:(NSDictionary*)adData;
--(NSString*)adTypeForController:(UIViewController<MediaBrixAdViewController>*)controller;
 -(NSString*)adTypeForAd:(id)ad;
--(NSString*)adTypeForTarget:(NSDictionary *)target;
--(NSDictionary*)targetForAdType:(NSString*)adType zone:(NSString*)zone;
-@property (nonatomic,strong) NSMutableDictionary * mbSocialDictionary;
 @property(nonatomic,strong) NSString * baseURL;
 @property(nonatomic,strong) NSString * appID;
 @end
