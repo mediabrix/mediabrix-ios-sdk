@@ -20,8 +20,6 @@ class ViewController: UIViewController {
         MediaBrix.initMediaBrixDelegate(self, withBaseURL: "http://mobile.mediabrix.com/v2/manifest", withAppID: "TwwvxoFnJn")
         
         //initialize te publishervariables dictionary
-        publisherVar = MediaBrix.userDefaults().defaultAdData()
-        
         //load the ad
     }
 
@@ -34,7 +32,7 @@ class ViewController: UIViewController {
         MediaBrix.sharedInstance().showAd(withIdentifier: "Babel_Rally", from: self, reloadWhenFinish: false)
     }
     func loadAd() {
-        MediaBrix.sharedInstance().loadAd(withIdentifier: "Babel_Rally", adData: publisherVar, with: self)
+        MediaBrix.sharedInstance().loadAd(withIdentifier: "Babel_Rally", with: self)
     }
     
 }

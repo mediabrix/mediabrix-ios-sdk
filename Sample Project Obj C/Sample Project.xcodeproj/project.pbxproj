@@ -124,7 +124,7 @@
 					52E4474E1CDB80060052A801 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = E27GYLKSK7;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -282,8 +282,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = E27GYLKSK7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Sample Project/Info.plist";
@@ -296,8 +297,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mediabrix.sample.Sample-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "58f070ac-0f6e-44dd-8cbc-a44d5272faa1";
-				PROVISIONING_PROFILE_SPECIFIER = TeamBrix_Enterprise;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -306,8 +307,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = E27GYLKSK7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Sample Project/Info.plist";
@@ -320,8 +322,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mediabrix.sample.Sample-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "58f070ac-0f6e-44dd-8cbc-a44d5272faa1";
-				PROVISIONING_PROFILE_SPECIFIER = TeamBrix_Enterprise;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

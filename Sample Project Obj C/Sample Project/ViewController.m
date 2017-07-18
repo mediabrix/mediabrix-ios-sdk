@@ -22,8 +22,7 @@
 }
 
 -(void)loadAd{
-    self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
-    [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rescue" adData:self.publisherVars withViewController:self];
+    [[MediaBrix sharedInstance]loadAdWithIdentifier:@"Babel_Rescue" withViewController:self];
 }
 
 -(void)showAd {

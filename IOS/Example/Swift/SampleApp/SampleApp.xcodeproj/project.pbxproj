@@ -108,6 +108,7 @@
 				TargetAttributes = {
 					EE0552F31CCFF34E0058CE07 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = E27GYLKSK7;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -265,6 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E27GYLKSK7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/src",
@@ -289,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E27GYLKSK7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/src",
