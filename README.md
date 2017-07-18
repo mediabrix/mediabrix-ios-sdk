@@ -47,10 +47,6 @@ Include the following import and dictionary in your class' header file. Please e
  
 @interface ExampleViewController : UIViewController <MediaBrixDelegate> {
 }
- 
-/* property for storing publisher vars from MediaBrix user defaults */
-@property(strong,nonatomic) NSMutableDictionary * publisherVars;
- 
 @end
 ```
 
