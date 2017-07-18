@@ -11,7 +11,5 @@
 
 @interface ViewController : UIViewController
 
-@property(strong,nonatomic) NSMutableDictionary * publisherVars;
-
 @end
 
