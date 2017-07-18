@@ -77,8 +77,7 @@ It is important to ensure that after testing, the Release build of your app uses
 ### Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
 ``` 
-self.publisherVars = [[MediaBrix userDefaults] defaultAdData].mutableCopy;
-[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" adData:self.publisherVars withViewController:self];
+[[MediaBrix sharedInstance]loadAdWithIdentifier:@"Zone_Name" withViewController:self];
 //self refers to the UIViewController that is implementing the SDK.
 //if you do not have a reference to the UIViewController you can pass nil.
 ``` 
