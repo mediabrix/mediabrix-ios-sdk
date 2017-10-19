@@ -2,7 +2,7 @@
 
 ## Please see "Testing / Release Settings" section for new guidelines on testing and deploying your integration.
 
-![Cocoapods](https://img.shields.io/badge/pod-1.8.2.001-blue.svg)
+![Cocoapods](https://img.shields.io/badge/pod-1.8.2.002-blue.svg)
 
 ## Installation with CocoaPods
 
