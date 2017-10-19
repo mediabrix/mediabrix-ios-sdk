@@ -30,12 +30,28 @@ Then, run the following command:
 $ pod install
 ```
 
-#### iOS 9 & 10 
-The MediaBrix SDK is now App Transport Security compliant. If you run into any issues when ATS is enabled, please email us at support@mediabrix.com immediately. 
+#### ATS on iOS 9, 10 & 11
+The MediaBrix SDK requires an exception for App Transport Security for our ad request calls. Please add the following exception key and value dictionary to your project's info.plist:
 
-If you do not wish to enable ATS at this time, you may disable it by adding the following key and value in your project's info.plist:
+```
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>pubads.g.doubleclick.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+ ```
 
-![](http://knowledge.mediabrix.com/userfiles/803/1179/ckfinder/images/ATS.PNG?dc=201509302214-16)
+![](https://cdn.mediabrix.com/o38/devsupportportal/Apple_ATS_Instructions.png)
 
 
 
