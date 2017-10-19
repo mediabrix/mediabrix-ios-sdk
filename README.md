@@ -143,6 +143,7 @@ The Receptiv SDKs v1.8.0.050 and up support bitcode. Current versions that suppo
  * 1.8.0.050
  * 1.8.1.000
  * 1.8.2.001
+ * 1.8.2.002
 
 
 ### Example
