@@ -2,7 +2,7 @@
 
 ## Please see "Testing / Release Settings" section for new guidelines on testing and deploying your integration.
 
-![Cocoapods](https://img.shields.io/badge/pod-1.8.2.003-blue.svg)
+![Cocoapods](https://img.shields.io/badge/pod-1.8.3.001-blue.svg)
 
 ## Installation with CocoaPods
 
@@ -74,17 +74,9 @@ To initialize the MediaBrix SDK you will need to create an instance of the Media
 //self refers to the UIViewController that is implementing the SDK
 ``` 
 
-### Testing / Release Settings
+### Testing Outside of the US
 
-To facilitate integrations and QA around the globe, MediaBrix has deployed an open Base URL for all of our world wide network partners to use while testing the MediaBrix SDK. This Test Base URL will eliminate the need for proxying your device to the US and ensure your app receives 100% fill during testing.
-
-* **Test Base URL:** `https://test-mobile.mediabrix.com/v2/manifest/`
-
-* **Production Base URL:** `https://mobile.mediabrix.com/v2/manifest/`
-
-`https://test-mobile.mediabrix.com/v2/manifest/` should **ONLY** be used for testing purposes, as it will not deliver live campaigns to your app.
-
-It is important to ensure that after testing, the Release build of your app uses the Production Base URL. **If you release your app using the Test Base URL, your app will not receive payable MediaBrix ads.**
+Due to changes to EU Law (GDPR), Verve video ads only display in the United States and Canada. For 100% fill when requesting ads outside of the US, we suggest you proxy to the US while testing your integration.
 
 ### Load an Ad
 Once you received the kMediaBrixStarted callback, you will now be able to load ads. To load ads call the method below: 
